@@ -1,0 +1,13 @@
+sources:
+{
+	simtestComponent.c
+}
+requires:
+{
+	api:
+	{
+		modemServices/le_sim.api
+		modemServices/le_mrc.api
+		
+	}
+}

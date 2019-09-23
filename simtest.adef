@@ -1,0 +1,29 @@
+executables:
+{
+	simtest = ( simtestComponent )
+}
+bindings:
+{
+	simtest.simtestComponent.le_sim->modemService.le_sim
+	simtest.simtestComponent.le_mrc->modemService.le_mrc
+}
+
+
+processes:
+{
+	envVars:
+	{
+		LE_LOG_LEVEL = DEBUG
+	}
+
+	run:
+	{
+		( simtest )
+	}
+
+	maxCoreDumpFileBytes: 512K
+	maxFileBytes: 512K
+}
+
+version: 1.0.0
+maxFileSystemBytes: 512K
